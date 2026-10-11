@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0f6">
+  <meta name="description" content="A little love website made by Andra for Zalffa.">
+  <title>Andra ♡ Zalffa</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="floating-hearts" aria-hidden="true">
+    <span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span>
+  </div>
+
+  <main class="container">
+    <section class="music-player">
+      <img class="album" src="album.jpg" alt="Sampul musik"
+        onerror="this.onerror=null;this.src='zalffa.jpg'">
+
+      <div class="track-info">
+        <span class="now-playing">NOW PLAYING ♡</span>
+        <h2>we fell in love in october</h2>
+        <p>girl in red</p>
+        <span class="our-song">♡ our song</span>
+
+        <div class="progress-row">
+          <span id="current-time">0:00</span>
+          <input id="progress" type="range" min="0" max="100"
+            value="0" step="0.1" aria-label="Posisi lagu">
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+
+      <button id="play-button" class="play-button"
+        type="button" aria-label="Putar musik">▶</button>
+
+      <audio id="music" src="music.mp3" preload="metadata" loop></audio>
+    </section>
+
+    <header class="site-header">
+      <div class="tiny-hearts">♥ ♡ ♥</div>
+      <p class="eyebrow">A LITTLE WEBSITE MADE WITH LOVE</p>
+      <h1>Andra <span>♡</span> Zalffa</h1>
+      <p class="subtitle">my favorite person, my favorite story.</p>
+    </header>
+
+    <nav class="navigation" aria-label="Navigasi website">
+      <button class="nav-button active" data-page="home">⌂ Home</button>
+      <button class="nav-button" data-page="story">♡ Our Story</button>
+      <button class="nav-button" data-page="gallery">▧ Gallery</button>
+      <button class="nav-button" data-page="letter">✉ For You</button>
+    </nav>
+
+    <!-- HOME -->
+    <section class="page active" id="home">
+      <div class="card home-layout">
+        <div class="polaroid">
+          <img src="couple-1.jpg" alt="Foto Andra dan Zalffa">
+        </div>
+
+        <div class="home-content">
+          <p class="script">you make ordinary days feel special.</p>
+          <h2>Our little universe ✧</h2>
+          <p class="muted">Adzikri Andra Pohan &amp; Zalffa Zascia Indra</p>
+
+          <div class="timer-card">
+            <p id="timer-label">Our time together</p>
+            <div id="timer">Menghitung waktu...</div>
+            <small>5 Oktober 2026 · 19.00 WIB</small>
+          </div>
+
+          <button class="primary" data-go="story">Open our story ♡</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="page card" id="story" hidden>
+      <p class="eyebrow">CHAPTER ONE</p>
+      <h2>Somehow, it's you.</h2>
+
+      <div class="story-layout">
+        <div>
+          <p class="body-copy">
+            Dari banyaknya orang di dunia, aku senang bisa mengenal kamu.
+            Aku nggak tahu semua cerita kita ke depannya bakal seperti apa,
+            tapi aku ingin menikmati setiap momen kecil yang kita punya.
+          </p>
+
+          <div class="quote">
+            “In a world full of people, I'm glad I found you.”
+          </div>
+
+          <button class="primary" data-go="gallery">Next chapter →</button>
+        </div>
+
+        <img class="story-photo" src="couple-2.jpg" alt="Kenangan kita">
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="page card" id="gallery" hidden>
+      <p class="eyebrow">OUR LITTLE MEMORIES</p>
+      <h2>Pieces of us ♡</h2>
+
+      <div class="gallery">
+        <figure>
+          <img src="couple-1.jpg" alt="Foto bersama">
+          <figcaption>Us, being us ♡</figcaption>
+        </figure>
+        <figure>
+          <img src="couple-2.jpg" alt="Foto kenangan">
+          <figcaption>A little memory</figcaption>
+        </figure>
+        <figure>
+          <img src="zalffa.jpg" alt="Foto Zalffa">
+          <figcaption>My favorite girl 🌷</figcaption>
+        </figure>
+        <figure>
+          <img src="andra.jpg" alt="Foto Andra">
+          <figcaption>Your person ♡</figcaption>
+        </figure>
+      </div>
+
+      <button class="primary" data-go="letter">One last thing 💌</button>
+    </section>
+
+    <!-- LETTER -->
+    <section class="page card" id="letter" hidden>
+      <p class="eyebrow">A LITTLE LETTER FOR YOU</p>
+
+      <div id="closed-letter">
+        <div class="envelope">💌</div>
+        <h2>For Zalffa</h2>
+        <p class="muted">There's something I want you to know.</p>
+        <button id="open-letter" class="primary">Open my letter ♡</button>
+      </div>
+
+      <article id="letter-content" hidden>
+        <h2>Dear Zalffa, 🌷</h2>
+        <p class="body-copy">
+          Makasih sudah hadir di hidup Andra. Aku mungkin nggak selalu
+          bisa merangkai kata-kata yang sempurna, tapi aku harap kamu
+          bisa merasakan betapa berharganya kamu buat aku.
+        </p>
+        <p class="body-copy">
+          Semoga kita bisa terus saling memahami, saling mendukung,
+          dan membuat banyak kenangan indah bersama. Nggak perlu
+          sempurna, yang penting kita sama-sama berusaha. ♡
+        </p>
+        <p class="script signature">With love, Andra ♡</p>
+      </article>
+
+      <button class="secondary" data-go="home">↶ Back to home</button>
+    </section>
+
+    <footer>
+      <p>made with ♡ by Andra for Zalffa</p>
+      <small>Best viewed with love, always. ♡</small>
+    </footer>
+  </main>
+</body>
+</html>
